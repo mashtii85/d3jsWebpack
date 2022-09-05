@@ -7,5 +7,8 @@ Every file has it's own DocType and every function has a description to make the
 # Installation
 Please install npm packages before run the project
 
+# Compilation
+After packages installed run `npm start`
+
 # Have word
 It was really fun and get to know d3js much better, that is an awsome lib, thank you for your time and letting me to have this opportunity
