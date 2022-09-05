@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve",
+    "start": "webpack serve --open",
     "watch": "webpack --watch",
+    "lint": "eslint ./src --ext .js",
+    "lint:fix": "npm run lint -- --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

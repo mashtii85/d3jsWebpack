@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
 
 const folderPath = path.resolve(__dirname, "./src/components/");
 
@@ -8,25 +7,24 @@ module.exports = {
   mode: 'development',
   entry: './src/js/main.js',
 
-  
-  devServer:{
+
+  devServer: {
     static: path.resolve(__dirname, 'src/components'),
     port: 8080,
     hot: true
   },
-  plugins:[
-    [new ESLintPlugin()],
+  plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
       inject: 'body',
-      hash:true,
-  chunksSortMode:'manual',
-  
+      hash: true,
+      chunksSortMode: 'manual',
+
       template: "./src/components/index.html",
       filename: "index.html",
       HTML_PATH: folderPath,
 
-     }),
+    }),
   ],
   module: {
     rules: [
